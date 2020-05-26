@@ -1,7 +1,7 @@
 # tcpping
 Utility for ping via TCP
 ## Install
-git clone 
+git clone https://github.com/AndreyR204/tcpping.git
 pip install -r requirements.txt
 ## Usage
 python main.py  [-h] [--host HOST] [--port PORT] [--max MAX]
