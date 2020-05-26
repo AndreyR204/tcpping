@@ -11,7 +11,7 @@ def get_results(count, passed, failed):
     if failed != 0:
         lRate = failed / (count) * 100
         lRate = "%.2f" % lRate
-    string = "\nPing Results: Connections (Total/Pass/Fail): [{:}/{:}/{:}] (Failed: {:}%)"
+    string = "\nResults:  (Total/Pass/Fail): [{:}/{:}/{:}] (Failed: {:}%)"
     print(string.format((count), passed, failed, str(lRate)))
 
 
