@@ -7,7 +7,7 @@ from tcping import variables
 parser = argparse.ArgumentParser()
 parser.add_argument('--host', '-H', default='127.0.0.1', help='host')
 parser.add_argument('--port', '-p', default=80, help='port')
-parser.add_argument('--max', '-m', default=100, help='max count')
+parser.add_argument('--max', '-m', default=10, help='max count')
 args = parser.parse_args()
 # Host
 try:
