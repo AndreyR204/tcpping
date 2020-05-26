@@ -6,8 +6,6 @@ from timeit import default_timer as timer
 from tcping import variables
 
 
-
-
 def get_results(count, passed, failed):
     lRate = 0
     if failed != 0:
