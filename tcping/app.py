@@ -11,9 +11,8 @@ def get_results(count, passed, failed):
     if failed != 0:
         lRate = failed / (count) * 100
         lRate = "%.2f" % lRate
-
-    print("\nPing Results: Connections (Total/Pass/Fail): [{:}/{:}/{:}] (Failed: {:}%)".format((count), passed,
-                                                                                                   failed, str(lRate)))
+    string = "\nPing Results: Connections (Total/Pass/Fail): [{:}/{:}/{:}] (Failed: {:}%)"
+    print(string.format((count), passed, failed, str(lRate)))
 
 
 def signal_handler(signal, frame):
@@ -55,7 +54,8 @@ def ping_hosts(host, port, maxcount):
         s_runtime = "%.2f" % (1000 * (s_stop - s_start))
 
         if success:
-            print("Connected to %s[%s]: tcp_seq=%s time=%s ms" % (host, port, (variables.count - 1), s_runtime))
+            string = "Connected to %s[%s]: tcp_seq=%s time=%s ms"
+            print(string % (host, port, (variables.count - 1), s_runtime))
             variables.passed += 1
 
         # Sleep for 1sec
