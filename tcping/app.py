@@ -12,7 +12,7 @@ def get_results(count, passed, failed):
         if failed != 0:
             lRate = failed / (count) * 100
             lRate = "%.2f" % lRate
-    except  ZeroDivisionError:
+    except ZeroDivisionError:
         return ZeroDivisionError
     string = "\nResults:  (Total/Pass/Fail): [{:}/{:}/{:}] (Failed: {:}%)"
     print(string.format((count), passed, failed, str(lRate)))
