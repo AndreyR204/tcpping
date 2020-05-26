@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import sys
 from tcping import app
+from tcping import variables
 
 host = None
 port = 80
@@ -32,4 +33,5 @@ except ValueError:
     sys.exit(1)
 except IndexError:
     pass
-app.ping_hosts(host,port,maxcount)
+app.ping_hosts(host, port, maxcount)
+app.get_results(variables.count, variables.passed, variables.failed)

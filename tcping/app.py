@@ -63,4 +63,4 @@ def ping_hosts(host, port, maxcount):
         # Sleep for 1sec
         if variables.count < maxcount:
             time.sleep(1)
-    get_results(variables.count, variables.passed, variables.failed)
+    return
