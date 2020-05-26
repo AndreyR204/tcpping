@@ -7,10 +7,13 @@ from tcping import variables
 
 
 def get_results(count, passed, failed):
-    lRate = 0
-    if failed != 0:
-        lRate = failed / (count) * 100
-        lRate = "%.2f" % lRate
+    try:
+        lRate = 0
+        if failed != 0:
+            lRate = failed / (count) * 100
+            lRate = "%.2f" % lRate
+    except  ZeroDivisionError:
+        return ZeroDivisionError
     string = "\nResults:  (Total/Pass/Fail): [{:}/{:}/{:}] (Failed: {:}%)"
     print(string.format((count), passed, failed, str(lRate)))
 
