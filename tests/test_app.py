@@ -16,6 +16,9 @@ class TestStringMethods(unittest.TestCase):
     def test_pinglocal(self):
         self.assertEqual(app.ping_hosts('127.0.0.1', 80, 3), None)
 
+    def test_minus(self):
+        self.assertEqual(app.get_results(-1, 1, 1), None)
+
 
 if __name__ == '__main__':
     unittest.main()
